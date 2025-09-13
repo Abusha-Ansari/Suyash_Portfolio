@@ -45,8 +45,8 @@ export function About() {
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 p-1">
                 <div className="bg-background rounded-xl overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&crop=face"
-                    alt="Alex Morgan - Developer & Cybersecurity Student"
+                    src="src/assets/profile.jpg"
+                    alt="Suyash Gargote - Developer & Cybersecurity Student"
                     className="w-full h-[500px] object-cover transition-transform duration-300 hover:scale-105"
                   />
                 </div>
@@ -96,7 +96,7 @@ export function About() {
               {/* Key Points */}
               <div className="grid sm:grid-cols-2 gap-4 mt-8">
                 {[
-                  { icon: GraduationCap, title: "Computer Science Student", desc: "Specialized in Cybersecurity" },
+                  { icon: GraduationCap, title: "Electronics & Computer Science Student", desc: "Specialized in Cybersecurity" },
                   { icon: Shield, title: "Security Focus", desc: "Penetration Testing & Defense" },
                   { icon: Code, title: "Full-Stack Developer", desc: "Modern Web Technologies" },
                   { icon: Target, title: "Goal-Oriented", desc: "Continuous Learning & Growth" },

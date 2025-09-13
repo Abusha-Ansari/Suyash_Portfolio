@@ -11,12 +11,11 @@ interface Skill {
 
 const skillsData = {
   programming: [
-    { name: 'Python', level: 90, category: 'programming' },
-    { name: 'JavaScript', level: 85, category: 'programming' },
-    { name: 'TypeScript', level: 80, category: 'programming' },
-    { name: 'C/C++', level: 75, category: 'programming' },
-    { name: 'Java', level: 70, category: 'programming' },
-    { name: 'Go', level: 65, category: 'programming' },
+    { name: 'Python', level: 70, category: 'programming' },
+    { name: 'JavaScript', level: 60, category: 'programming' },
+    { name: 'TypeScript', level: 30, category: 'programming' },
+    { name: 'C/C++', level: 70, category: 'programming' },
+    { name: 'Java', level: 50, category: 'programming' },
   ],
   cybersecurity: [
     { name: 'Wireshark', level: 85, category: 'cybersecurity' },
@@ -27,20 +26,18 @@ const skillsData = {
     { name: 'OWASP', level: 80, category: 'cybersecurity' },
   ],
   web: [
-    { name: 'React', level: 90, category: 'web' },
-    { name: 'Node.js', level: 85, category: 'web' },
-    { name: 'Next.js', level: 80, category: 'web' },
-    { name: 'Express.js', level: 85, category: 'web' },
-    { name: 'MongoDB', level: 75, category: 'web' },
+    { name: 'React', level: 30, category: 'web' },
+    { name: 'Next.js', level: 20, category: 'web' },
+    { name: 'MongoDB', level: 70, category: 'web' },
     { name: 'PostgreSQL', level: 80, category: 'web' },
   ],
   cloud: [
-    { name: 'AWS', level: 80, category: 'cloud' },
-    { name: 'Docker', level: 85, category: 'cloud' },
-    { name: 'Kubernetes', level: 70, category: 'cloud' },
-    { name: 'CI/CD', level: 75, category: 'cloud' },
-    { name: 'Git', level: 90, category: 'cloud' },
-    { name: 'Linux', level: 85, category: 'cloud' },
+    { name: 'AWS', level: 25, category: 'cloud' },
+    { name: 'Docker', level: 30, category: 'cloud' },
+    { name: 'Kubernetes', level: 20, category: 'cloud' },
+    { name: 'CI/CD', level: 20, category: 'cloud' },
+    { name: 'Git', level: 75, category: 'cloud' },
+    { name: 'Linux', level: 80, category: 'cloud' },
   ],
 }
 

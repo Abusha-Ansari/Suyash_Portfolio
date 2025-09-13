@@ -1,76 +1,84 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { useToast } from '@/hooks/use-toast'
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef, useState } from "react";
+import {
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+  Github,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 
 export function Contact() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const { toast } = useToast()
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
     toast({
       title: "Message sent successfully!",
       description: "Thank you for reaching out. I'll get back to you soon.",
-    })
-    
-    setIsSubmitting(false)
+    });
+
+    setIsSubmitting(false);
     // Reset form
-    ;(e.target as HTMLFormElement).reset()
-  }
+    (e.target as HTMLFormElement).reset();
+  };
 
   const contactInfo = [
     {
       icon: Mail,
-      label: 'Email',
-      value: 'alex.morgan@email.com',
-      href: 'mailto:alex.morgan@email.com',
+      label: "Email",
+      value: "suyashgargote26@email.com",
+      href: "suyashgargote26@email.com",
     },
     {
       icon: Phone,
-      label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      label: "Phone",
+      value: "+91 7977603364",
+      href: "+91 7977603364",
     },
     {
       icon: MapPin,
-      label: 'Location',
-      value: 'San Francisco, CA',
-      href: '#',
+      label: "Location",
+      value: "Thane, Maharashtra, India",
+      href: "#",
     },
-  ]
+  ];
 
   const socialLinks = [
     {
       icon: Github,
-      label: 'GitHub',
-      href: '#',
-      color: 'hover:text-foreground',
+      label: "GitHub",
+      href: "https://github.com/SuyashGargote",
+      color: "hover:text-foreground",
     },
     {
       icon: Linkedin,
-      label: 'LinkedIn',
-      href: '#',
-      color: 'hover:text-blue-500',
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/suyash-gargote-a1585b251",
+      color: "hover:text-blue-500",
     },
     {
       icon: Twitter,
-      label: 'Twitter',
-      href: '#',
-      color: 'hover:text-blue-400',
+      label: "Twitter",
+      href: "https://x.com/GargoteSuyash",
+      color: "hover:text-blue-400",
     },
-  ]
+  ];
 
   return (
     <section id="contact" className="py-20 bg-background" ref={ref}>
@@ -103,7 +111,8 @@ export function Contact() {
               transition={{ delay: 0.6 }}
               className="text-lg text-muted-foreground mt-6 max-w-3xl mx-auto"
             >
-              Ready to collaborate on your next project or discuss cybersecurity solutions? Let's connect!
+              Ready to collaborate on your next project or discuss cybersecurity
+              solutions? Let's connect!
             </motion.p>
           </div>
 
@@ -120,38 +129,45 @@ export function Contact() {
                   Let's Start a Conversation
                 </h3>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  Whether you're looking for a cybersecurity consultant, a full-stack developer, 
-                  or just want to discuss the latest in tech security, I'm always excited to connect 
-                  with fellow technology enthusiasts.
+                  Whether you're looking for a cybersecurity consultant, a
+                  full-stack developer, or just want to discuss the latest in
+                  tech security, I'm always excited to connect with fellow
+                  technology enthusiasts.
                 </p>
               </div>
 
               {/* Contact Details */}
               <div className="space-y-6">
-                {contactInfo.map(({ icon: Icon, label, value, href }, index) => (
-                  <motion.a
-                    key={label}
-                    href={href}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ delay: 0.5 + index * 0.1 }}
-                    className="flex items-center space-x-4 p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border/50 hover:bg-card/80 hover:border-primary/30 transition-all duration-300 group"
-                  >
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <Icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">{label}</p>
-                      <p className="text-foreground font-medium">{value}</p>
-                    </div>
-                  </motion.a>
-                ))}
+                {contactInfo.map(
+                  ({ icon: Icon, label, value, href }, index) => (
+                    <motion.a
+                      key={label}
+                      href={href}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={
+                        isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                      }
+                      transition={{ delay: 0.5 + index * 0.1 }}
+                      className="flex items-center space-x-4 p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border/50 hover:bg-card/80 hover:border-primary/30 transition-all duration-300 group"
+                    >
+                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                        <Icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <p className="text-sm text-muted-foreground">{label}</p>
+                        <p className="text-foreground font-medium">{value}</p>
+                      </div>
+                    </motion.a>
+                  )
+                )}
               </div>
 
               {/* Social Links */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                }
                 transition={{ delay: 0.8 }}
                 className="pt-8"
               >
@@ -191,7 +207,10 @@ export function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="firstName"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       First Name
                     </label>
                     <Input
@@ -203,7 +222,10 @@ export function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="lastName"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Last Name
                     </label>
                     <Input
@@ -217,7 +239,10 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Email Address
                   </label>
                   <Input
@@ -231,7 +256,10 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Subject
                   </label>
                   <Input
@@ -244,7 +272,10 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Message
                   </label>
                   <Textarea
@@ -266,7 +297,11 @@ export function Contact() {
                     <>
                       <motion.div
                         animate={{ rotate: 360 }}
-                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                        transition={{
+                          duration: 1,
+                          repeat: Infinity,
+                          ease: "linear",
+                        }}
                         className="w-5 h-5 border-2 border-white border-t-transparent rounded-full mr-2"
                       />
                       Sending...
@@ -284,5 +319,5 @@ export function Contact() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

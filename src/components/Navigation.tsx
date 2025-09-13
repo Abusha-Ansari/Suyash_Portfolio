@@ -73,7 +73,7 @@ export function Navigation() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              AM
+              SG
             </motion.a>
 
             {/* Desktop Navigation */}
@@ -113,7 +113,7 @@ export function Navigation() {
                 className="btn-outline text-sm"
                 asChild
               >
-                <a href="#" download>
+                <a href="src\assets\Resume.pdf" download>
                   <Download className="w-4 h-4 mr-2" />
                   Resume
                 </a>
@@ -183,7 +183,7 @@ export function Navigation() {
                       className="w-full btn-outline"
                       asChild
                     >
-                      <a href="#" download>
+                      <a href="\src\assets\Resume.pdf" download>
                         <Download className="w-4 h-4 mr-2" />
                         Download Resume
                       </a>
