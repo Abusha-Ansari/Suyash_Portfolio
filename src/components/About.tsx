@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { GraduationCap, Shield, Code, Target } from 'lucide-react'
+import profileImage from "@/assets/profile.jpg";
 
 export function About() {
   const ref = useRef(null)
@@ -45,7 +46,7 @@ export function About() {
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 p-1">
                 <div className="bg-background rounded-xl overflow-hidden">
                   <img
-                    src="src/assets/profile.jpg"
+                    src={profileImage}
                     alt="Suyash Gargote - Developer & Cybersecurity Student"
                     className="w-full h-[500px] object-cover transition-transform duration-300 hover:scale-105"
                   />
